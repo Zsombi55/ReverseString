@@ -5,6 +5,7 @@
  * Time: 21:20
  */
 using System;
+using System.Text;
 
 namespace reverse_string
 {
@@ -14,27 +15,27 @@ namespace reverse_string
         {
             Console.WriteLine("Enter a text: ");
             string text = Console.ReadLine();
-            ReverseString(text);
-            Console.WriteLine(text);
+            
+            Console.WriteLine(ReverseString(text));
         }
 
         static string ReverseString(string input) {
             if (string.IsNullOrEmpty(input)) {
                 return string.Empty;
             }
-            
-            string reversed = "";
 
             int length = input.Length;
-            StringBuilder reversed = new Stringbuilder();
+            StringBuilder reversed = new StringBuilder(length);
 
-            while (index >= 0)
-            {
-                //Console.WriteLine($"{text[index]}");
+            int index = length - 1;
+
+            while (index >= 0) {
+            	//Console.WriteLine($"{text[index]}");
                 //reversed += $"{text[index]}";
                 reversed.Append($"{input[index]}");
                 index--;
             }
+
             return reversed.ToString();
         }
     }
