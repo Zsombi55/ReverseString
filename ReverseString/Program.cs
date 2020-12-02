@@ -15,8 +15,9 @@ namespace reverse_string
         {
             Console.WriteLine("Enter a text: ");
             string text = Console.ReadLine();
-            
             Console.WriteLine(ReverseString(text));
+            
+            Console.ReadKey();
         }
 
         static string ReverseString(string input) {
@@ -32,7 +33,7 @@ namespace reverse_string
             while (index >= 0) {
             	//Console.WriteLine($"{text[index]}");
                 //reversed += $"{text[index]}";
-                reversed.Append($"{input[index]}");
+                reversed.Append($"{input[index]}"); //TODO NOTICE :: this actually works but this IDE is too old to get it, try eg.VisualStudio.
                 index--;
             }
 
